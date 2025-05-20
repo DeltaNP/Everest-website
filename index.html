@@ -1,47 +1,278 @@
-<!DOCTYPE html>
 <html lang="en">
-  <html lang="de">
   <head>
-    <title>Everest Realms-Site-Maintenance</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="media/png" href="media/logo.png" >
-    <link rel="stylesheet" href="media/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/> <!-- Replace href with the path to your website's icon file (.ico) -->
-    <title>Maintenance Page</title> <!-- Change to your website title -->
-  </head>
-  <body>
-    <div class="maintenance-container">
-      <div class="maintenance-content">
-        <div class="icon-wrapper">
-          <i class="fas fa-cog rotating"></i> <!-- Rotating gear -->
-          <i class="fas fa-cog rotating reverse"></i> <!-- Rotating gear backwards -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Everest Realms Nepal</title>
+    <link rel="icon" type="media/png" href="media/logo.png">
+    <link rel="stylesheet" href="media/style.css">
+    <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <nav class="desktop_navbar nav">
+      <a href="#"><img class="desktop_navbar_logo_img" src="media/logo.png" alt="logo" draggable="false"></a>
+      <a href="https://www.youtube.com/@MrBin_Official" class="desktop_navbar_link" target="_blank">Youtube</a>
+      <a href="#discord" class="desktop_navbar_link scroll">Community</a>
+      <a href="#about" class="desktop_navbar_link scroll">About Us</a>
+      <a href="https://www.instagram.com/classy.delta/" class="desktop_navbar_link">Instagram</a>
+      <a href="#discord" class="desktop_navbar_link">Download</a>
+      <a href="webs/rules.html" class="desktop_navbar_link">Rules</a>
+                <button id="play-pause">Play</button>
+<audio id="background-music" loop>
+  <source src="media/Bhana.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  const audio = document.getElementById('background-music');
+  const button = document.getElementById('play-pause');
+
+  button.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      button.textContent = '🎶';
+    } else {
+      audio.pause();
+      button.textContent = '🎵';
+    }
+  });
+</script>
+      <div class="desktop_navbar_link2_div">
+          <a href="#join" class="desktop_navbar_link2 scroll">Join Us!</a>
+      </div>
+    </nav>
+    <div class="mobile_navbar">
+      <a href="#" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="media/logo_small.webp" alt="logo" draggable="false"></a>
+      <div id="mobile_navbar_links">
+          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="https://www.youtube.com/@MrBin_Official" target="_blank">Youtube</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#discord">Community</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#about">About Us</a>
+          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="https://www.instagram.com/classy.delta/" >Instagram</a>
+          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="#discord" >Download</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#join">Internet Protocol</a>
+
         </div>
-        <h1>Everest Realms Under Devlopment</h1> <!-- Title -->
-        <p>We're currently developing our website to bring you an even better experience.</p> <!-- What are devs doing -->
-        <div class="details">
-          <div class="detail-item">
-            <i class="fas fa-clock"></i>
-            <span>Estimated Duration - After some days </span> <!-- Estimated time for the website to be back online -->
+        <div class="icon" onclick="mobile_navbar_link_hider()" draggable="false">
+            <i class="fa fa-bars"></i>
+        </div>
+        <script>
+            function mobile_navbar_link_hider() {
+            var x = document.getElementById("mobile_navbar_links");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+            } 
+        </script>
+    </div>
+    <div class="mainflex">
+      <div class="main1">
+        <a class="main1_logo_a" href="#">
+          <img class="main1_logo" src="media/everest.png" alt="logo" draggable="false">
+        </a>
+        <div class="main1_description">
+          <a >Explore,<br>discover the</a>
+          <a class="main1_actcent">Everest Realms Discord</a><a>.</a>
+        </div>
+        <div class="main1_ipcopier_div">
+          <button class="main1_ipcopier" onclick="copyText()" type="button">
+            <span class="main1_ipcopier_text1">np.everestrealms.fun</span>
+            <br>
+            <span class="main1_ipcopier_text2">Click to copy</span>
+          </button>
+          <script>
+            function copyText() {
+                navigator.clipboard.writeText
+            ("4.240.36.51:25595");
+                }
+            $(document).ready(function() {
+            $('.main1_ipcopier').click(function() {
+                var popup = $('<div>', { class: 'main1_popup' })
+                .append($('<h3 class="copy_confirm">').text('Copied IP to clipboard'))
+                $(this).after(popup);
+                setTimeout(function() {
+                popup.remove();
+                }, 1000);
+            });
+            });
+        </script>
+        </div>
+        <a href="#more" class="scroll">
+          <img alt="downarrow" class="main1_downarrow" src="media/downarrow.png">
+        </a>
+        <script>
+          const scrollLinks = document.querySelectorAll('.scroll');
+          scrollLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+              event.preventDefault();
+              const target = document.querySelector(link.getAttribute('href'));
+              const offsetTop = target.offsetTop;
+              window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+              });
+            });
+          });
+        </script>
+
+
+      </div>
+      <div id="more"></div>
+      <div class="main2">
+        <a class="headline">Features of Everest Realms ! </a>
+        <div class="main2_features_div">
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/Survival.jpg">
+            <a class="main2_feature_headline">Survival </a>
+            <a class="main2_feature_text"> Survival is one of the game modes in Minecraft. . </a>
           </div>
-          <div class="detail-item">
-            <i class="fas fa-envelope"></i>
-            <span>Contact: deltakk021@gmail.com</span> <!-- Support contact e-mail -->
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/Economy.jpg">
+            <a class="main2_feature_headline"> Economy </a>
+            <a class="main2_feature_text">A server that focuses on the development and management of a virtual economy.  </a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/Minigames.jpg">
+            <a class="main2_feature_headline">MiniGames</a>
+            <a class="main2_feature_text"> A variety of modes exclusive to the Legacy Console Edition of Minecraft.  </a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/Events.jpg">
+            <a class="main2_feature_headline">Events</a>
+            <a class="main2_feature_text"> You Can Join Weekly Events And Get IG Rewards And Real life Rewards </a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/Nolag.jpg">
+            <a class="main2_feature_headline"> NoLag </a>
+            <a class="main2_feature_text"> Everest Realms Is 24/7 No Low Latency Zero Lag. </a>
           </div>
         </div>
-        <div class="progress">
-          <div class="progress-bar"></div>
+      </div>
+      <div id="discord"></div>
+      <div class="main4">
+        <a class="headline">Join the Discord</a>
+        <div class="main4_dc_div">
+          <iframe class="main4_dc_widget" src="https://discord.com/widget?id=1341614117676388352&theme=dark" width="350" height="500" title="discord" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
+          <div class="main4_dc_description_div">
+            <a class="main4_dc_description_title">Lets Play!</a>
+            <a class="main4_dc_description"> ・Meet other members <br> ・Ask questions <br> ・Get notified about updates <br> ・Give feedback  <br><br> &amp; more </a>
+            <a href="https://discord.gg/everestontop" class="main4_dc_button_a">
+              <div class="main4_dc_button">Join</div>
+            </a>
+          </div>
         </div>
-        <div class="social-links">
-          <a href="https://youtube.com/@MrBin_Official" class="social-link"><i class=""></i>YOUTUBE</a><!-- Change href to Facebook link -->
+        <div class="main4_5">
+            <a class="headline">Download Minecraft</a>
+            <div class="main4_5_dc_div">
+              <div class="main4_5_dc_description_div">
+                <a class="main4_5_dc_description_title">Minecraft Nepal </a>
+                <a class="main4_5_dc_description"> 🎮 You Can Purchase Minecraft Premium but you can Also Play Everest Realms From Cracked Minecraft Also Java Edition & Pocket Edition If You Have Any Problem or Want Any Help Please Open An Ticket In Discord  </a>
+
+                <a href=" https://skmedix.pl/downloads" class="main4_dc_button_a">
+                    <div class="main4_5_dc_button">Java 💸</div>
+                </a>
+                <a href="https://mcpedl.org/minecraft-pe-1-21-50-apk/" class="main4_dc_button_a">
+                    <div class="main4_5_dc_button">Pocket Edition 🌟</div>
+                </a>
+              </div>
+            </div>
+      </div>
+      <div id="about"></div>
+      <div class="main5">
+        <a class="headline">Everest Realms Nepal</a>
+        <div class="main5_admin_div">
+          <div class="main5_admins_div main5_admins_dev_type2">
+            <img class="main5_admins_img" alt="admin member img" src="media/sword.png">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_owner">[Management/व्यवस्थापन]</a>
+              <a class="main5_admins_description_title" href="https://www.youtube.com/@MrBin_Official">Null </a>
+              <a class="main5_admins_description">Ceo<br>Head Moderator Management Board</a>
+            </div>
+          </div>
+          <div class="main5_admins_div main5_admins_dev_type1">
+            <img class="main5_admins_img" alt="admin member img" src="media/1343907985151361044.png">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_admin">[Owner/मालिक]</a>
+              <a class="main5_admins_description_title" href="https://www.youtube.com/@MrBin_Official"> Mr Bin </a>
+              <a class="main5_admins_description">Owner<br>One and only our Owner of Everest Realms Nepal  </a>
+            </div>
+          </div>
         </div>
-        <div class="img">
-        <a href="https://discord.gg/beTNNHZcXS" > <img class="img" src="media/logo.png"> 
-      </a>
+        <div class="main5_supporter_div">
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="media/pirated-removebg-preview.png">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Minecraft Management/ एमसी व्यवस्थापन]</a>
+              <a class="main5_supporters_description_title" href="webs/error.html"> Satyam</a>
+              <a class="main5_supporters_description">Everest Realms  Nepal Management<br>Staff Team</a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="media/one-piece-icons-by-me-v0--removebg-preview.png">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Discord Management/डीसी व्यवस्थापन]</a>
+              <a class="main5_supporters_description_title" href="webs/error.html">Delta</a>
+              <a class="main5_supporters_description"><br>Curently Head Adminstrative Staff Team</a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="media/images__3_-removebg-preview.png">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Developers Management/विकासकर्ता व्यवस्थापन]</a>
+              <a class="main5_supporters_description_title" href="webs/error.html">Notzer, Weekness, Sundar</a>
+              <a class="main5_supporters_description">Developer<br>Solo Developer</a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="media/op-removebg-preview.png">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Promotion Team/पदोन्नति टोली]</a>
+              <a class="main5_supporters_description_title" href="webs/error.html">Naruto</a>
+              <a class="main5_supporters_description">Promotional<br>Promote And Collab Managemnet</a>
+            </div>
+          </div>
         </div>
-        <center> <b> CLICK THE LOGO TO JOIN OUR DISCORD</b></center>
+      </div>
+      <div id="join"></div>
+      <div class="main3">
+        <a class="headline">Internet Protocol</a>
+        <div class="main3_join_div_div">
+          <div class="main3_join_div">
+            <a class="main3_join_title">IP</a>
+            <div class="main3_join_content_div">
+              <div class="main3_join_categories">
+                <a>🎥</a>
+              </div>
+              <div class="main5_supporters_description_title" href="https://www.youtube.com/@Mr_BinNepal">
+                <a>np.everestrealms.fun</a>
+              </div>
+            </div>
+          </div>
+          <div class="main3_join_div">
+            <a class="main3_join_title">Port</a>
+            <div class="main3_join_content_div">
+              <div class="main3_join_categories">
+                <a>🎡</a>
+              </div>
+              <div class="main5_supporters_description_title" href="https://www.instagram.com/ig_Mr_Bin/">
+                <a>19132</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+</div>
+<script src="script.js"></script>
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p href="https:discord.gg/everestontop" class="footer-bottom-text">Made by Delta  | Powered By Everest Realms  Nepal</p>
+        </div>
+    </footer>
   </body>
-  </html>
+</html>
